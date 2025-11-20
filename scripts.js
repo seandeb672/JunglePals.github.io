@@ -103,3 +103,78 @@ $(function () {
   });
 });
 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const checkboxes = document.querySelectorAll('input[name="readiness"]');
+  const readyBtn = document.getElementById('ready-button');
+  const speciesBox = document.getElementById('Species-Location'); 
+  const searchBtn = document.getElementById('search-adopt');
+
+  if (!checkboxes.length || !readyBtn || !speciesBox || !searchBtn) return;
+
+  // Hide the species/location box in the beginning
+  speciesBox.style.display = 'none';
+
+  // Turns off ready button until all checked
+  readyBtn.disabled = true;
+  function updateReadyState() {
+    const allChecked = [...checkboxes].every(cb => cb.checked);
+    readyBtn.disabled = !allChecked;
+  }
+  checkboxes.forEach(cb => cb.addEventListener('change', updateReadyState));
+
+  // Show the box when the button is clicked
+  readyBtn.addEventListener('click', () => {
+    speciesBox.style.display = 'block';
+    speciesBox.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // Get dropdowns and adopt div's
+  const speciesSelect = document.getElementById('Species');
+  const locationSelect = document.getElementById('location-selector');
+  const adoptDivs = document.querySelectorAll('#adopt-images > .adopt-card');
+
+  // Hide all adopt images from the beginning
+  adoptDivs.forEach(div => div.style.display = 'none');
+
+  // 'No Results" div if there's nothing
+  let noResults = document.getElementById('no-results');
+  if (!noResults) {
+    noResults = document.createElement('div');
+    noResults.id = 'no-results';
+    noResults.style.display = 'none';
+    noResults.style.textAlign = 'center';
+    noResults.style.padding = '20px';
+    noResults.style.fontWeight = 'bold';
+    noResults.textContent = 'No results found.';
+    document.getElementById('adopt-images').appendChild(noResults);
+  }
+
+  // Filter adopt images when searching
+  searchBtn.addEventListener('click', () => {
+    const selectedSpecies = speciesSelect.value;
+    const selectedLocation = locationSelect.value;
+
+    let anyShown = false; // hide the others
+
+    adoptDivs.forEach(div => {
+      const matchesSpecies = div.dataset.species === selectedSpecies;
+      const matchesLocation = div.dataset.location === selectedLocation;
+
+      if (matchesSpecies && matchesLocation) {
+        div.style.display = 'block';
+        anyShown = true;
+      } else {
+        div.style.display = 'none';
+      }
+    });
+
+    // Show or hide the "No Results" message
+    noResults.style.display = anyShown ? 'none' : 'block';
+
+    // Go to results
+    const resultsSection = document.getElementById('adopt-images');
+    if (resultsSection) resultsSection.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
