@@ -636,3 +636,255 @@
      height: 220px;
    }
  }
+
+.adoption { 
+  font:'Arial', sans-serif;
+}
+
+#adopt-intro { 
+  display: flex row;
+  text-align: center justify;
+  padding: 40px;
+  padding-bottom: 0px;
+  font-size: larger;
+}
+
+#Monkey { 
+  object-fit: contain;
+  padding: 10px;
+  border-top: solid #dfaf36 8px;
+  border-bottom: solid #dfaf36 8px;
+}
+
+#Monkey-Hug { 
+  width: 100%;
+  max-width: 98%;
+  max-height: 500px;
+  border: solid black 2px;
+}
+
+ul {
+  list-style: none;
+  padding: 10px;
+  padding-top: 0;
+  margin: 0;
+}
+
+ul h3 { 
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+#list1 { 
+  padding-top: 0px;
+}
+
+li { 
+  padding: 10px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #888;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #4caf50; 
+  border-color: #4caf50;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#ready-button {
+  background-color:#fac26b;   
+  color: black;
+  padding: 12px 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+#ready-button:hover {
+  background-color: #dfaf36;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#ready-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#ready-button:disabled {
+  background-color: #c7c7c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  color: #666;
+}
+
+
+#adopt-intro { 
+  margin-left: 10px;
+}
+
+#adopt-readiness { 
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+#readiness { 
+  background-color: #497740;
+  font-size: larger;
+  color:#fff;
+  border: solid #fac26b 2px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+/* Container box for the dropdowns and button */
+#Species-Location {
+  max-width: 400px;           /* box width */
+  margin: 20px auto;          /* center horizontally */
+  padding: 20px;
+  background-color: #497740;  /* dark green */
+  border: 2px solid #fac26b;  /* matching yellow/gold border */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Form styling */
+#species-location-selector {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  gap: 15px;             /* space between items */
+}
+
+/* Labels */
+#species-location-selector label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Dropdown styling */
+#species-location-selector select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #888;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#species-location-selector select:hover {
+  border-color: #fac26b;
+}
+
+/* Add some space between the select dropdown and labels if needed */
+#species-location-selector select + label {
+  margin-top: 10px;
+}
+
+/* Search button styling */
+#search-adopt {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #fac26b;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#search-adopt:hover {
+  background-color: #dfaf36;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+#search-adopt:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Optional: make dropdowns and button full width */
+#species-location-selector select,
+#search-adopt {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#no-results { 
+  display: none; 
+  text-align: center; 
+  padding: 20px; 
+  font-weight: bold;
+}
+
+#adopt-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.adopt-card {
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.adopt-card img {
+  width: 100%;
+  max-width: 60%; 
+  max-height: 500px;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.adopt-card h4 {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.adopt-card p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}
