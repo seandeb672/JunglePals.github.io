@@ -658,7 +658,7 @@
 
 #Monkey-Hug { 
   width: 100%;
-  max-width: 98%;
+  max-width: 95%;
   max-height: 500px;
   border: solid black 2px;
 }
@@ -888,3 +888,4 @@ input[type="checkbox"]:checked::after {
   font-size: 14px;
   color: #555;
 }
+
