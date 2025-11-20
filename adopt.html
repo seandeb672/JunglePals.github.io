@@ -31,8 +31,144 @@
     </nav>
     <button class="donate-btn">Donate</button>
   </header>
-  <h2>Adopt</h2>
+  <section id="adoption" class="pet-adoption">
+    <div id="adopt-intro">
+      <h1>Adoption</h1>
+      <div id="Monkey">
+        <img src="Images/MonkeyHug.png" id="Monkey-Hug" alt="Hugging-a-Monkey">
+      </div>
+      <h3>"What is Adoption and Are you ready for it?"</h3>
+      <p>Here at Jungle Pals, we deal with Adoption in the exotic pet world. Now, this isn’t just taking home a cute face — it’s a commitment to specialized husbandry, habitat engineering, and behavioral enrichment. It requires understanding species-specific nutritional matrices, environmental conditioning, and long-term health monitoring. Are you ready to integrate a high-maintenance, often unpredictable, and utterly fascinating creature into your life? True readiness means aligning your lifestyle, resources, and knowledge base to meet the physiological and psychological needs of your new exotic companion.</p>
+    </div> 
 
+    <div id="adopt-readiness">
+      <form id="readiness"> 
+          <ul>
+            <h3>Readiness Check :</h3>
+            <li id="list1">
+              <input type="checkbox" id="item1" name="readiness">
+              <label for="item1">I’m ready to care for it every day.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item2" name="readiness">
+              <label for="item2">I’m ready to feed it the right food.</label>
+            </li>
+              <li>
+              <input type="checkbox" id="item3" name="readiness">
+              <label for="item3">I’m ready to keep its space clean.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item4" name="readiness">
+              <label for="item4">I’m ready to pay for its needs.</label>
+            </li>
+            <li>
+              <input type="checkbox" id="item5" name="readiness">
+              <label for="item5">I’m ready to handle it safely and responsibly.</label>
+            </li>
+            <button id="ready-button" type="button" disabled>I'm Ready!</button>
+          </ul>
+      </form>
+    </div>
+
+    <div id="next-section"> 
+      <div id="Species-Location">
+        <form id="species-location-selector">
+          <label for="Species">Choose a species :</label>
+            <select id="Species" name="Species">
+              <option value="Arachnid">Arachnid</option>
+              <option value="Reptile">Reptile</option>
+              <option value="Big-Cats">Big-Cats</option>
+              <option value="Other">Other</option>
+            </select>
+          <label for="Location">Please Enter Your Location :</label>
+            <select  id="location-selector">
+              <option value="Leinster">Leinster</option>
+              <option value="Munster">Munster</option>
+              <option value="Connaught">Connaught</option>
+              <option value="Ulster">Ulster</option>
+            </select>
+            <button type="button" id="search-adopt">Search</button>
+        </form>
+      </div>
+      <div id="adopt-images">
+        <div id="adopt1" data-species="Arachnid" data-location="Leinster" class="adopt-card">
+          <img src="images/arachnid1.jpeg" alt="Arachnid 1">
+          <h4>Name: Googly</h4>
+          <p>Age: 2 years</p>
+          <p>Personality: People-person</p>
+        </div>
+        <div id="adopt2" data-species="Arachnid" data-location="Munster" class="adopt-card">
+          <img src="images/spider.jpg" alt="Arachnid 2">
+          <h4>Name: Larry</h4>
+          <p>Age: 1 year</p>
+          <p>Personality: Curious</p>
+        </div>
+        <div id="adopt3" data-species="Arachnid" data-location="Ulster" class="adopt-card">
+          <img src="images/arachnid3.jpg" alt="Arachnid 3">
+          <h4>Name: Webby</h4>
+          <p>Age: 3 years</p>
+          <p>Personality: Shy</p>
+        </div>
+        <div id="adopt4" data-species="Reptile" data-location="Leinster" class="adopt-card">
+          <img src="images/gecko.jpg" alt="Reptile 1">
+          <h4>Name: Anto</h4>
+          <p>Age: 4 years</p>
+          <p>Personality: Friendly</p>
+        </div>
+        <div id="adopt5" data-species="Reptile" data-location="Munster" class="adopt-card">
+          <img src="images/reptile2.jpg" alt="Reptile 2">
+          <h4>Name: Scale</h4>
+          <p>Age: 2 years</p>
+          <p>Personality: Playful</p>
+        </div>
+        <div id="adopt6" data-species="Reptile" data-location="Connaught" class="adopt-card">
+          <img src="images/reptile3.jpg" alt="Reptile 3">
+          <h4>Name: Fang</h4>
+          <p>Age: 3 years</p>
+          <p>Personality: Alert</p>
+        </div>
+        <div id="adopt7" data-species="Big-Cats" data-location="Leinster" class="adopt-card">
+          <img src="images/Big-Cats1png.png" alt="Big Cat 1">
+          <h4>Name: Leo</h4>
+          <p>Age: 5 years</p>
+          <p>Personality: Brave</p>
+        </div>
+        <div id="adopt8" data-species="Big-Cats" data-location="Munster" class="adopt-card">
+          <img src="images/bigcat2.jpg" alt="Big Cat 2">
+          <h4>Name: Tigra</h4>
+          <p>Age: 4 years</p>
+          <p>Personality: Playful</p>
+        </div>
+        <div id="adopt9" data-species="Big-Cats" data-location="Ulster" class="adopt-card">
+          <img src="images/bigcat3.jpg" alt="Big Cat 3">
+          <h4>Name: Shadow</h4>
+          <p>Age: 6 years</p>
+          <p>Personality: Independent</p>
+        </div>
+        <div id="adopt10" data-species="Other" data-location="Leinster" class="adopt-card">
+          <img src="images/hedgehog.jpg" alt="Other 1">
+          <h4>Name: Hedgey</h4>
+          <p>Age: 1 year</p>
+          <p>Personality: Energetic</p>
+        </div>
+        <div id="adopt11" data-species="Other" data-location="Connaught" class="adopt-card">
+          <img src="images/parrot.jpg" alt="Other 2">
+          <h4>Name: Charlie</h4>
+          <p>Age: 2 years</p>
+          <p>Personality: Friendly</p>
+        </div>
+        <div id="adopt12" data-species="Other" data-location="Ulster" class="adopt-card">
+          <img src="images/other3.jpg" alt="Other 3">
+          <h4>Name: Dumbo</h4>
+          <p>Age: 3 years</p>
+          <p>Personality: Curious</p>
+        </div>
+        <div id="no-results">No results found.
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
 
 <!--Newsletter--> 
 <section id="newsletter" class="newsletter">
@@ -46,10 +182,10 @@
       <input type="text" name="first_name" placeholder="First name" required>
       <input type="email" name="email" placeholder="Email" required>
       <button type="submit">Subscribe</button>
-      
-    </form>
-  </div>
-</section>
+
+      </form>
+    </div>
+  </section>
 
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
