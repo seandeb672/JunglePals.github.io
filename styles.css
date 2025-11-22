@@ -889,3 +889,82 @@ input[type="checkbox"]:checked::after {
   color: #555;
 }
 
+/* shane cosgrove x25115651 addition */
+/*Help Page Hero*/
+
+.help-hero {
+	background-image: url("images/volunteer.jpg");
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	position: relative;
+	padding: 5rem 2rem;
+	text-align: center;
+	border-top: 8px solid #fac26b;
+	border-bottom: 8px solid #fac26b;
+}
+
+.help-hero::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,0,0.45);
+		z-index: 0;
+}
+
+.help-hero * {
+	position: relative;
+	z-index: 2;
+}
+
+/*help Grid*/
+.help-options-section {
+	max-width:1100px;
+	margin: 3rem auto;
+	padding: 0 1rem;
+}
+
+.help-options-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+.help-card {
+	background: #fff;
+	border-radius: 14px;
+	box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+	padding-bottom:1rem;
+	text-align: center;
+	transition: transform .3s, box-shadow .3s;
+}
+
+.help-card img {
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+	border-radius: 14px 14px 0 0;
+}
+
+.help-btn {
+	background-color: #fac26b;
+	padding: 0.6rem 1.3rem;
+	border-radius: 8px;
+	display: inline-block;
+	margin-top: 0.5rem;
+	font-weight: 700;
+	transition: background-color .3s;
+}
+
+.help-btn:hover {
+	background-color: #dfaf36;
+}
+	
+.help-card:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
